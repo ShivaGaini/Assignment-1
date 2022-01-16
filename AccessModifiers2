@@ -1,0 +1,103 @@
+2  accessSpecifiers1.java 
+@@ -0,0 +1,22 @@
+package accessModifiers;
+
+class defAccessSpecifier { 
+  void display() { 
+         System.out.println("You are using defalut access specifier"); 
+     } 
+} 
+
+public class accessSpecifiers1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//default
+				System.out.println("Dafault Access Specifier");
+				defAccessSpecifier obj = new defAccessSpecifier(); 		  
+		        obj.display(); 
+
+	}
+
+}
+   
+	 
+	 
+ 23  accessSpecifiers2.java 
+@@ -0,0 +1,23 @@
+package accessModifiers;
+
+class priaccessspecifier { 
+   private void display() { 
+        System.out.println("You are using private access specifier"); 
+    } 
+} 
+
+public class accessSpecifiers2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//private
+				System.out.println("Private Access Specifier");
+				priaccessspecifier  obj = new priaccessspecifier(); 
+		        //trying to access private method of another class 
+		        //obj.display();
+	}
+
+}
+
+
+ 12  accessSpecifiers3.java 
+@@ -0,0 +1,12 @@
+package pack2;
+import pack1.*;
+
+public class accessSpecifiers3 extends proaccessspecifiers {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		accessSpecifiers3 obj = new accessSpecifiers3 ();   
+	       obj.display();  
+	}
+
+}
+
+
+
+ 13  accessSpecifiers4.java 
+@@ -0,0 +1,13 @@
+package pack2;
+import pack1.*;
+
+public class accessSpecifiers4 {
+public static void main(String[] args) {
+
+		pubaccessspecifiers obj = new pubaccessspecifiers(); 
+        obj.display();  
+
+	}
+}
+
+
+ 8  proaccessspecifiers.java 
+ @@ -0,0 +1,8 @@
+package pack1;
+
+public class proaccessspecifiers {
+
+	protected void display() { 
+        System.out.println("This is protected access specifier"); 
+    } 
+}
+ 8  pubaccessspecifiers.java 
+@@ -0,0 +1,8 @@
+package pack1;
+
+public class pubaccessspecifiers {
+
+	public void display() { 
+        System.out.println("This is Public Access Specifiers"); 
+    } 
+}
