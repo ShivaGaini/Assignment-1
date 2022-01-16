@@ -1,0 +1,42 @@
+public class innerClassAssisted2 {
+	private String ="Inner Classes";
+
+	 void display() {  
+		 class Inner {  
+			 void fly() {
+				 System.out.println(fly);
+			 }  
+	  }  
+	  
+	  Inner l=new Inner();  
+	  l.fly();  
+	 }  
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		innerClassAssisted2  o1=new innerClassAssisted2 ();  
+		o1.display();  
+	}
+
+}
+
+
+
+abstract class RoyalInnerClass {
+	   public abstract void display();
+	}
+
+public class innerClassAssisted3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		RoyalInnerClass i = new RoyalInnerClass() {
+
+	         public void display() {
+	            System.out.println("Royal Inner Class");
+               i.display();
+	         }
+	      }
+          }
+}
